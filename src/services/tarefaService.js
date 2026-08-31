@@ -14,9 +14,9 @@ export async function criarTarefa(tarefa) {
   const resposta = await fetch(URL_API, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(tarefa)
+    body: JSON.stringify(tarefa),
   });
 
   if (!resposta.ok) {
@@ -28,7 +28,7 @@ export async function criarTarefa(tarefa) {
 
 export async function excluirTarefa(id) {
   const resposta = await fetch(`${URL_API}/${id}`, {
-    method: "DELETE"
+    method: "DELETE",
   });
 
   if (!resposta.ok) {
@@ -40,11 +40,11 @@ export async function atualizarStatus(id, concluida) {
   const resposta = await fetch(`${URL_API}/${id}`, {
     method: "PATCH",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      concluida: concluida
-    })
+      concluida,
+    }),
   });
 
   if (!resposta.ok) {
