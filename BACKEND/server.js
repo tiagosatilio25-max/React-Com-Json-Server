@@ -51,7 +51,7 @@ app.post("/tarefas", (req, res) => {
   }
 });
 
-//ATUALIZAR
+
 app.patch("/tarefas/:id", (req, res) => {
   try {
     const { id } = req.params;
@@ -75,7 +75,6 @@ app.patch("/tarefas/:id", (req, res) => {
   }
 });
 
-//EXCLUIR UMA TAREFA
 app.delete("/tarefas/:id", (req, res) => {
   try {
     const { id } = req.params;
