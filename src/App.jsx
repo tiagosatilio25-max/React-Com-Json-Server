@@ -91,8 +91,51 @@ function App(){
             );
 
             setTarefas((ListaAtual) =>
-            
+                ListaAtual.map((item) =>
+                item.id === tarefa.id ? tarefaAtualizada : item
         )
+    );
+        }catch (error){
+            console.error(error);
+            setErro("Não foi possível alterar a tarefa");
+
         }
     }
+    return (
+        <>
+        <Header />
+            <main className="container">
+                <section className="apresentação">
+                    <h1>Gerenciador de Tarefas</h1>
+
+                    <p>
+                        react consumido uma API simulada com JSON Server
+                    </p>
+                </section>
+
+                <FormTarefa onAdicionar={adicionarTarefa}/>
+
+                {erro && (
+                    <p className="erro">
+                        {erro}
+                    </p>
+                )}
+
+                {carregando ? (
+                    <p>Carregando...</p>
+                ) : (
+                    <ListaTarefas
+                    tarefa={tarefas}
+                    onExcluir= {removerTarefa}
+                    onAdicionar= {adicionarTarefa}
+                    />
+                )}
+            </main>
+
+            <Footer />
+       
+        </>
+    )
 }
+
+export default App;
