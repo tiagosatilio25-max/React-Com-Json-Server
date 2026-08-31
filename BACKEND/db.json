@@ -8,7 +8,7 @@
     {
       "id": 3,
       "titulo": "Consumir uma API",
-      "concluida": false
+      "concluida": true
     },
     {
       "titulo": "estudar javascript",
@@ -20,7 +20,7 @@
       "concluida": false,
       "id": 5
 
-      
+
     }
   ]
 }
