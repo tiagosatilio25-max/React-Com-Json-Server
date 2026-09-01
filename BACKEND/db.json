@@ -1,27 +1,22 @@
-{
-  "tarefas": [
-    {
-      "id": 2,
-      "titulo": "Aprender JSON Server",
-      "concluida": true
-    },
-    {
-      "id": 3,
-      "titulo": "Consumir uma API",
-      "concluida": true
-    },
-    {
-      "titulo": "estudar javascript",
-      "concluida": false,
-      "id": 4
-    },
-    {
-      "titulo": "ESTUDAR HTML",
-      "concluida": false,
-      "id": 5
-
-
-    }
-  ]
-}
-
+[
+  {
+    "id": 2,
+    "titulo": "Aprender JSON Server",
+    "concluida": true
+  },
+  {
+    "id": 3,
+    "titulo": "Consumir uma API",
+    "concluida": true
+  },
+  {
+    "titulo": "estudar javascript",
+    "concluida": false,
+    "id": 4
+  },
+  {
+    "titulo": "ESTUDAR HTML",
+    "concluida": true,
+    "id": 5
+  }
+]

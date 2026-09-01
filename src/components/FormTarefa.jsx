@@ -1,34 +1,35 @@
 import { useState } from "react";
 
 function FormTarefa({ onAdicionar }) {
-    const [titulo, setTítulo] = useState("");
+  const [titulo, setTitulo] = useState("");
 
-    function enviar(event) {
-        event.preventDefault();
+  function enviar(event) {
+    event.preventDefault();
 
-        const tituloLipo = titulo.trim();
+    const tituloLimpo = titulo.trim();
 
-        if (!tituloLipo) {
-            return;
-        }
-
-        onAdicionar(tituloLipo);
-        setTítulo("");
+    if (!tituloLimpo) {
+      return;
     }
 
-    return (
-        <form className="forulario" onSubit= {enviar}>
-            <input
-             type="text"
-             placeholder="Digite uma tarefa"
-             value={titulo}
-             onChange={(event) => setTítulo(event.target.value)}
-             />
+    onAdicionar(tituloLimpo);
+    setTitulo("");
+  }
 
-             <button type="subit">Adicionar</button>
-        </form>
-    );
+  return (
+    <form className="formulario" onSubmit={enviar}>
+      <input
+        type="text"
+        placeholder="Digite uma tarefa"
+        value={titulo}
+        onChange={(event) => setTitulo(event.target.value)}
+      />
+
+      <button type="submit">
+        Adicionar
+      </button>
+    </form>
+  );
 }
-
 
 export default FormTarefa;
